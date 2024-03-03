@@ -1,0 +1,15 @@
+<div class="flex flex-col hover:scale-105 duration-300">
+    <div class="relative">
+        <img [src]="product.imageURL" alt="image" />
+        <i class="bi bi-heart absolute top-4 left-4 font-bold text-2xl z-50"></i>
+        <span class="text-lg" class="absolute bottom-0 left-0 bg-black text-white px-4 py-2">${{ product.price }}</span>
+        <span class="absolute top-12 right-0 bg-orange-400 text-sm font-semibold px-4 py-2" *ngIf="product.discountPrice">{{(100 - (product.discountPrice / product.price * 100)).toFixed(1)}}% OFF</span>
+    </div>
+
+    <span class="font-semibold text-lg">{{ product.name }}</span>
+    <span>{{ product.gender }} . {{ product.category }} . {{ product.brand }}</span>
+    <div>{{ product.color.length }} colors. Best Seller</div>
+    <div [ngStyle]="{fontWeight: 'semibold', color: product.is_in_inventory ? 'Green' : 'Red'}" >
+        {{product.is_in_inventory? 'Available in Stock' : 'Not Available'}}
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="py-4 px-[5rem] border-b-2 flex flex-col gap-4">
+    <div class="flex justify-end gap-6 text-sm">
+        <a href="">Help</a>
+        <a href="">Exchange & Returns</a>
+        <a href="">Order Tracker</a>
+        <a href="">SignUp / Login</a>
+    </div>
+    <div class="grid grid-cols-[1fr_2fr_1fr] items-center">
+        <div class="font-black text-3xl">
+            <!-- <img src="" alt=""> -->
+            eKart
+        </div>
+        <div class="flex justify-center gap-6 text-lg">
+            <a href="#" *ngFor="let menu of mainMenuItems">{{ menu }}</a>
+        </div>
+        <div class="flex justify-end">
+            <div class="w-full flex gap-1 justify-end">
+                <input
+                    type="text"
+                    class="bg-slate-200 px-4 py-2"
+                    placeholder="Search"
+                />
+                <button class="bg-slate-400 px-4">
+                    <i class="bi bi-search text-white" area-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="w-full flex justify-center gap-1">
+    <input
+        type="text"
+        class="bg-slate-200 px-4 py-4 w-[50%]"
+        placeholder="Search"
+        [(ngModel)]="searchText"
+    />
+    <button
+        [ngClass]="{
+            'duration-300 px-4': true,
+            'bg-black': searchText,
+            'bg-slate-400': !searchText
+        }"
+        [disabled]="!searchText"
+    >
+        <i class="bi bi-search text-white" area-hidden="true"></i>
+    </button>
+</div>
+<p class="mt-10" *ngIf="searchText !== ''">
+    Search result for: <strong>{{ searchText }}</strong>
+</p>

@@ -1,0 +1,40 @@
+<div class="px-[5rem] py-[3rem]">
+    <app-search></app-search>
+    <product-list></product-list>
+    <!-- <div *ngFor="let item of listOfString">
+        <p>Current element of array is : {{ item }}</p>
+    </div> -->
+</div>
+
+<!-- <img [src]="product.pImage" alt="image" class="h-[10rem]" /> -->
+
+<!-- String interpolation -->
+<!-- <p>Name: {{ product.name }}</p>
+<p>PriceL ${{ product.price }}</p>
+<p>Color: {{ product.color }}</p>
+<p>Discounted Price: ${{ getDiscountedPrice().toFixed(2) }}</p>
+<p>
+    {{
+        product.inStock > 0
+            ? "Only " + product.inStock + " left"
+            : "Not in Stock"
+    }}
+</p> -->
+
+<!-- Property Binding -->
+<!-- <button [disabled]="!(product.inStock > 0)" class="bg-slate-400">
+    Buy Now
+</button><br> -->
+<!-- <input type="text" bind-value="name" [attr.aria-hidden]="" class="border-2"> <br> -->
+
+<!-- The string interpolation is not working on
+disabled, hidden, checked -->
+<!-- You can use bind-value or [value] -->
+
+<!-- Event Binding -->
+<!-- <input type="text" [value]="name" (input)="onNameChange($event)" class="border-2 border-rose-500"> <br>
+<p>Name : {{name}}</p> -->
+
+<!-- <button class="bg-indigo-500 h-[2rem] aspect-square" (click)="decrementCartValue()">-</button>
+<span>{{ addToCart }}</span>
+<button class="bg-indigo-500 h-[2rem] aspect-square" (click)="incrementCartValue()">+</button> -->
